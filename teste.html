@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Layout Float - Turista Paranaense</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Layout Float - Turista Paranaense</h2>
+    <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will
+        stack on top of each other.</p>
+    <p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML
+        Responsive.)</p>
+    <p>Além de aprender sobre o layout float, integro pontos turísticos do litoral paranaense.</p>
+
+    <header>
+        <h2>Litoral Paranaense</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#ilha-do-mel">Ilha do Mel</a></li>
+                <li><a href="#pontal-do-sul">Pontal do Sul</a></li>
+                <li><a href="#praia-de-leste">Praia de Leste</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1 id="ilha-do-mel">Ilha do Mel</h1>
+            <p><strong>UM PARAÍSO NO LITORAL</strong></p>
+            <p>Um dos mais belos atrativos turísticos do Paraná, a Ilha do Mel encanta quem a conhece. Formada basicamente por ecossistemas de restinga e floresta Atlântica, o lugar se destaca como um dos principais destinos de ecoturismo do Brasil.</p>
+            <p>Entre seus importantes atrativos naturais e históricos, estão as suas belas praias, a Gruta das Encantadas, a estação ecológica, um parque estadual, o Farol das Conchas e a Fortaleza Nossa Senhora dos Prazeres.</p>
+            <p>Visitar a Ilha do Mel é conhecer um pedaço do paraíso.</p>
+
+            <h1 id="pontal-do-sul">Pontal do Sul</h1>
+            <p><strong>PORTAL PARA A ILHA DO MEL</strong></p>
+            <p>Conhecida como o principal ponto de embarque para a Ilha do Mel, Pontal do Sul é uma charmosa vila de pescadores com belas paisagens e praias tranquilas. O local é ideal para quem busca descanso e boa gastronomia, especialmente pratos com frutos do mar.</p>
+            <p>Com uma infraestrutura que atende turistas, é o ponto de partida perfeito para explorar o litoral paranaense.</p>
+
+            <h1 id="praia-de-leste">Praia de Leste</h1>
+            <p><strong>LAZER E FAMÍLIA</strong></p>
+            <p>Uma das praias mais movimentadas do litoral paranaense, Praia de Leste é conhecida por sua infraestrutura completa, incluindo bares, restaurantes e opções de lazer. É ideal para famílias, oferecendo atividades para todas as idades.</p>
+            <p>Com suas águas calmas e areias claras, é um dos destinos preferidos para quem deseja diversão e comodidade.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>
